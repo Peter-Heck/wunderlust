@@ -11,6 +11,7 @@
 <body>
 
 <header>
+    <a href="#description">Skip to Content</a>
     <h1>Wunderlust Travel</h1>
     <picture>
         <source media="(min-width:1024px)" srcset="images/logo-L.png">
@@ -32,29 +33,23 @@
     <section id="description">
         <h2>Majorca</h2>
         <p>Imagine an island with turquoise blue waters, secret coves, soft golden sands, lush green foliage, rugged mountains, picturesque villages and a vibrant capital city. The island and its capital, Palma, are overflowing with character, while its beaches are famous all around the world, making it one of the most sought-after summer destinations.</p>
-        <ul>
-            <li>
-                <picture>
-                    <source media="(min-width:1024px)" srcset="images/majorca-waves-L.png">
-                    <source media="(max-width:780px)" srcset="images/majorca-waves-M.png">
-                    <img media="(max-width:320px)" src="images/majorca-waves-S.png" alt="Blue waves crashing against a rocky cliff side">
-                </picture>
-            </li>
-            <li>
-                <picture>
-                    <source media="(min-width:1024px)" srcset="images/majorca-beach-L.png">
-                    <source media="(max-width:780px)" srcset="images/majorca-beach-M.png">
-                    <img media="(max-width:320px)" src="images/majorca-beach-S.png" alt="An alcove with a beach and blue waters">
-                </picture>
-            </li>
-            <li>
-                <picture>
-                    <source media="(min-width:1024px)" srcset="images/majorca-cove-L.png">
-                    <source media="(max-width:780px)" srcset="images/majorca-cove-M.png">
-                    <img media="(max-width:320px)" src="images/majorca-cove-S.png" alt="A lush cove leading out to the ocean with a boat floating towards the sun">
-                </picture>
-            </li>
-        </ul>
+        <picture>
+            <source media="(min-width:1024px)" srcset="images/majorca-waves-L.png">
+            <source media="(max-width:780px)" srcset="images/majorca-waves-M.png">
+            <img media="(max-width:320px)" src="images/majorca-waves-S.png" alt="Blue waves crashing against a rocky cliff side">
+        </picture>
+        
+        <picture>
+            <source media="(min-width:1024px)" srcset="images/majorca-beach-L.png">
+            <source media="(max-width:780px)" srcset="images/majorca-beach-M.png">
+            <img media="(max-width:320px)" src="images/majorca-beach-S.png" alt="An alcove with a beach and blue waters">
+        </picture>
+
+        <picture>
+            <source media="(min-width:1024px)" srcset="images/majorca-cove-L.png">
+            <source media="(max-width:780px)" srcset="images/majorca-cove-M.png">
+            <img media="(max-width:320px)" src="images/majorca-cove-S.png" alt="A lush cove leading out to the ocean with a boat floating towards the sun">
+        </picture>
     </section>
 
     <section id="planTrip">
@@ -220,13 +215,13 @@
         <h2>Contact Us</h2>
         <form>
             <label for="fName">First Name: </label>
-            <input type="text" name="fName" id="fName" placeholder="Enter first name">
+            <input type="text" name="fName" id="fName" placeholder="Enter first name" required>
             <label for="lName">Last Name: </label>
-            <input type="text" name="lName" id="lName" placeholder="Enter last name">
+            <input type="text" name="lName" id="lName" placeholder="Enter last name" required>
 
             <fieldset>
                 <legend>Contact Method</legend>
-                <input type="radio" name="method" id="emailPref">
+                <input type="radio" name="method" id="emailPref" checked>
                 <label for="emailPref">Email</label>
                 <input type="radio" name="method" id="textPref">
                 <label for="textPref">Text</label>
@@ -234,14 +229,14 @@
                 <label for="phonePref">Phone</label>
             </fieldset>
             <label for="email">Email Address: </label>
-            <input type="email" name="email" id="email" placeholder="Enter Email">
+            <input type="email" name="email" id="email" placeholder="Enter Email" required>
             <label for="phone">Phone Number: </label>
-            <input type="tel" name="phone" id="phone" placeholder="Enter telephone number">
+            <input type="tel" name="phone" id="phone" placeholder="Enter telephone number" required>
 
             
             <label>
                 Destination: 
-                <input name="country" list="countries">
+                <input name="country" list="countries" required>
                 <datalist>
                     <option>Barcelona</option>
                     <option>Granada</option>
@@ -255,7 +250,7 @@
             </label>
             <label>
                 Travel Time:
-                <input name="time" list="times">
+                <input name="time" list="times" required>
                 <datalist>
                     <option>Fall</option>
                     <option>Winter</option>
@@ -264,6 +259,8 @@
                     <option>Flexible</option>
                 </datalist>
             </label>
+
+            <input type="submit">
         </form>
     </section>
 </main>
