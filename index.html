@@ -16,7 +16,8 @@
     <picture>
         <source media="(min-width:1024px)" srcset="images/logo-L.png">
         <source media="(max-width:780px)" srcset="images/logo-M.png">
-        <img media="(max-width:320px)" src="images/logo-s.png" alt="Wunderlust Travel logo with palm trees on a sunset">
+        <source media="(max-width:320px)" srcset="images/logo-s.png">
+        <img src="images/logo-s.png" alt="Wunderlust Travel logo with palm trees on a sunset">
     </picture>
     <p>Let Wunderlust Travel help you plan the trip of your dreams!</p>
     <nav>
@@ -36,19 +37,22 @@
         <picture>
             <source media="(min-width:1024px)" srcset="images/majorca-waves-L.png">
             <source media="(max-width:780px)" srcset="images/majorca-waves-M.png">
-            <img media="(max-width:320px)" src="images/majorca-waves-S.png" alt="Blue waves crashing against a rocky cliff side">
+            <source media="(max-width:320px)" srcset="images/majorca-waves-S.png">
+            <img src="images/majorca-waves-S.png" alt="Blue waves crashing against a rocky cliff side">
         </picture>
         
         <picture>
             <source media="(min-width:1024px)" srcset="images/majorca-beach-L.png">
             <source media="(max-width:780px)" srcset="images/majorca-beach-M.png">
-            <img media="(max-width:320px)" src="images/majorca-beach-S.png" alt="An alcove with a beach and blue waters">
+            <source media="(max-width:320px)" srcset="images/majorca-beach-S.png">
+            <img src="images/majorca-beach-S.png" alt="An alcove with a beach and blue waters">
         </picture>
 
         <picture>
             <source media="(min-width:1024px)" srcset="images/majorca-cove-L.png">
             <source media="(max-width:780px)" srcset="images/majorca-cove-M.png">
-            <img media="(max-width:320px)" src="images/majorca-cove-S.png" alt="A lush cove leading out to the ocean with a boat floating towards the sun">
+            <source media="(max-width:320px)" srcset="images/majorca-cove-S.png">
+            <img src="images/majorca-cove-S.png" alt="A lush cove leading out to the ocean with a boat floating towards the sun">
         </picture>
     </section>
 
@@ -118,7 +122,8 @@
             <picture>
                 <source media="(min-width:1024px)" srcset="images/miranda-blake-L.png">
                 <source media="(max-width:780px)" srcset="images/miranda-blake-M.png">
-                <img media="(max-width:320px)" src="images/miranda-blake-S.png" alt="A picture of Miranda Blake">
+                <source media="(max-width:320px)" srcset="images/miranda-blake-S.png">
+                <img src="images/miranda-blake-S.png" alt="A picture of Miranda Blake">
             </picture>
             <p><strong>Traveling From: London, England</strong></p>
             <p>“I traveled here for business, but my stay was extended. Now it is my home.”</p>
@@ -129,7 +134,8 @@
             <picture>
                 <source media="(min-width:1024px)" srcset="images/max-winter-L.png">
                 <source media="(max-width:780px)" srcset="images/max-winter-M.png">
-                <img media="(max-width:320px)" src="images/max-winter-S.png" alt="A picture of Max Winter">
+                <source media="(max-width:320px)" srcset="images/max-winter-S.png">
+                <img src="images/max-winter-S.png" alt="A picture of Max Winter">
             </picture>
             <p><strong>Traveling From: Berlin, Germany</strong></p>
             <p>“Great escape from my reality. Beautiful sunsets, wonderful people, great beer.”</p>
@@ -140,7 +146,8 @@
             <picture>
                 <source media="(min-width:1024px)" srcset="images/ines-villegoes-L.png">
                 <source media="(max-width:780px)" srcset="images/ines-villegoes-M.png">
-                <img media="(max-width:320px)" src="images/ines-villegoes-S.png" alt="A picture of Inés Villegoes">
+                <source media="(max-width:320px)" srcset="images/ines-villegoes-S.png">
+                <img src="images/ines-villegoes-S.png" alt="A picture of Inés Villegoes">
             </picture>
             <p><strong>Traveling From: Barcelona, Spain</strong></p>
             <p>“A very safe environment for all travelers.”</p>
@@ -151,7 +158,8 @@
             <picture>
                 <source media="(min-width:1024px)" srcset="images/carmen-lorenzo-L.png">
                 <source media="(max-width:780px)" srcset="images/carmen-lorenzo-M.png">
-                <img media="(max-width:320px)" src="images/carmen-lorenzo-S.png" alt="A picture of Carmen Lorenzo">
+                <source media="(max-width:320px)" srcset="images/carmen-lorenzo-S.png">
+                <img src="images/carmen-lorenzo-S.png" alt="A picture of Carmen Lorenzo">
             </picture>
             <p><strong>Traveling From: Madrid, Spain</strong></p>
             <p>“Live, laugh, love-- everything you need in Majorca.”</p>
@@ -237,7 +245,7 @@
             <label>
                 Destination: 
                 <input name="country" list="countries" required>
-                <datalist>
+                <datalist id="countries">
                     <option>Barcelona</option>
                     <option>Granada</option>
                     <option>Ibiza</option>
@@ -251,7 +259,7 @@
             <label>
                 Travel Time:
                 <input name="time" list="times" required>
-                <datalist>
+                <datalist id="times">
                     <option>Fall</option>
                     <option>Winter</option>
                     <option>Spring</option>
