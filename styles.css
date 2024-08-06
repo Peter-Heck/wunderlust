@@ -48,3 +48,29 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* My Styles */
+/* Import Font */
+@import url(https://fonts.google.com/share?selection.family=Molle:ital@1%7CMontserrat);
+
+/* General Styling */
+
+:root {
+	/* Colors */
+	--yellow: #F6D64A;
+	--teal: #55BCD5;
+	--purple: #9B26B0;
+	--blue: #499BD2;
+	--darkGray: #222222;
+	--lightGray: #EAEAEA;
+	--white: #FFFFFF;
+	--black: #000000;
+}
+
+h1, h2, h3 {
+	font-family: "Molle";
+}
+
+h4, p, q, small, nav, button, form {
+	font-family: "Montserrat";
+}
