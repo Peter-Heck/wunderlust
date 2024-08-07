@@ -1,4 +1,4 @@
-/* Peter Heck */
+/*----------------- Peter Heck -----------------*/
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -49,14 +49,14 @@ table {
 	border-spacing: 0;
 }
 
-/* My Styles */
-/* Import Font */
+/*----------------- My Styles -----------------*/
+/*----------------- Import Font -----------------*/
 @import url(https://fonts.google.com/share?selection.family=Molle:ital@1%7CMontserrat);
 
-/* General Styling */
+/*----------------- General Styling -----------------*/
 
 :root {
-	/* Colors */
+	/*----------------- Colors ------------------*/
 	--yellow: #F6D64A;
 	--teal: #55BCD5;
 	--purple: #9B26B0;
@@ -73,4 +73,326 @@ h1, h2, h3 {
 
 h4, p, q, small, nav, button, form {
 	font-family: "Montserrat";
+}
+
+h1 {
+	font-size: 4em;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 3.5em;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 3em;
+	font-weight: bold;
+}
+
+h4 {
+	font-size: 2em;
+	font-weight: bold;
+}
+
+p {
+	line-height: 1.5;
+	font-size: 1.5em;
+}
+
+a {
+	text-decoration: none;
+	color: var(--black);
+}
+
+a:visited {
+	color: var(--black);
+}
+
+#skip {
+	overflow: hidden;
+	position: absolute;
+	left: -100000px;
+}
+
+#skip:focus {
+	position: static;
+	width: auto;
+	height: auto;
+}
+
+header {
+	background: linear-gradient(var(--teal), var(--white));
+}
+
+#menu-toggle h2 {
+	overflow: hidden;
+	position: absolute;
+	left: -1000000px;
+}
+
+#menu-toggle input {
+	display: none;
+}
+
+main article {
+	display: grid;
+	grid-template-rows: repeat(5, auto);
+}
+
+#plan {
+	background-color: var(--yellow);
+}
+
+#about {
+	background-color: var(--blue);
+}
+
+#contact input, #contact select {
+	border: 2px solid var(--purple);
+}
+
+.required {
+	color: var(--purple);
+}
+
+/*--------------------- Small Screen ----------------------*/
+
+@media  (min-width: 620px) {
+	body {
+		width: 620px;
+		margin: auto;
+	}
+
+	/*------------------- Menu -------------------*/
+
+	#menu-toggle label {
+		display: block;
+	}
+
+	#menu-toggle ul {
+		visibility: hidden;
+		position: fixed;
+		top: -100%;
+		left: -100%;
+		width: 620px;
+		z-index: 99;
+		display: grid;
+		grid-template-rows: repeat(4, 1fr);
+		justify-content: center;
+	}
+
+	#menu-toggle ul li {
+		border-bottom: 0.5px solid var(--black);
+		width: 620px;
+		padding-top: 25px;
+		padding-bottom: 25px;
+		text-align: center;
+		color: var(--black);
+		background-color: var(--blue);
+		text-transform: uppercase;
+		position: relative;
+		left: -15px;
+	}
+
+	#menu-toggle input:checked ~ ul {
+		visibility: visible;
+		position: absolute;
+		top: 65px;
+		height: auto;
+		left: 0;
+		margin: auto;
+		z-index: 99;
+	}
+
+	#menu-toggle input:checked ~ label {
+		position: fixed;
+		top: 0;
+		left: -115px;
+		margin-top: 0;
+		width: 620px;
+		text-align: center;
+		height: auto;
+		z-index: 100;
+		padding-top: 25px;
+		padding-bottom: 25px;
+		background-color: var(--black);
+		color: var(--white);
+		text-transform: uppercase;
+	}
+
+	/*----------------- Header -----------------*/
+
+	header {
+		padding-left: auto;
+		display: grid;
+		grid-template-areas:
+			"logo menu1"
+			"h1 h1"
+			"h1p h1p";
+		padding-bottom: 50px;
+	}
+
+	#logo {
+		grid-area: logo;
+	}
+
+	#menu-toggle label {
+		position: relative;
+		grid-area: menu1;
+		text-transform: uppercase;
+		background-color: var(--yellow);
+		font-weight: bold;
+		padding-left: 100px;
+		padding-right: 100px;
+		margin-right: 50px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		margin-top: 30px;
+		left: -30px;
+	}
+
+	header h1 {
+		grid-area: h1;
+		position: relative;
+		left: 30px;
+		margin-top: 20px;
+	}
+
+	header p {
+		grid-area: h1p;
+		position: relative;
+		left: 30px;
+		width: 400px;
+	}
+
+	/*----------------- Intro -----------------*/
+
+	#intro {
+		width: 560px;
+		position: relative;
+		left: 30px;
+	}
+
+	#img-grid {
+		position: relative;
+		left: -30px;
+	}
+
+	#img-grid img {
+		width: 620px;
+		padding-top: 20px;
+	}
+
+	/*----------------- Plan -----------------*/
+
+	#plan {
+		padding-top: 40px;
+		padding-bottom: 40px;
+		margin-top: 40px;
+	}
+
+	#plan h3 {
+		text-align: center;
+	}
+
+	#plan div {
+		display: grid;
+		grid-template-rows: repeat(4, 1fr);
+		width: 620px;
+		justify-content: center;
+	}
+
+	#plan div section {
+		background-color: var(--teal);
+		border: 5px solid var(--white);
+		border-radius: 25px;
+		padding: 20px 100px 0px;
+		margin-top: 20px;
+		height: 400px;
+		text-align: center;
+	}
+
+	#plan div section h4 {
+		padding-bottom: 40px;
+	}
+
+	#plan div section a img {
+		height: 250px;
+	}
+
+	/*----------------- Testimonials -----------------*/
+
+	#testimonials {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+
+	#testimonials h3 {
+		text-align: center;
+	}
+
+	#testimonials div {
+		width: 580px;
+		margin: auto;
+		display: grid;
+		grid-template-rows: repeat(4, 1fr);
+		justify-content: center;
+	}
+
+	#testimonials section {
+		padding-top: 20px;
+		width: 300px;
+		text-align: center;
+	}
+
+	#testimonials section h4 {
+		text-transform: uppercase;
+	}
+
+	#testimonials section p {
+		font-size: 1.25em;
+	}
+
+	#testimonials section q {
+		font-style: italic;
+		font-size: 1.25em;
+	}
+
+	/*----------------- About -----------------*/
+
+	#about {
+		padding: 40px 0;
+	}
+
+	#about h3 {
+		width: 540px;
+		text-align: center;
+	}
+
+	#about div {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	#about div section {
+		padding-top: 20px;
+		text-align: center;
+	}
+}
+
+/*----------------- Medium Screen -----------------*/
+
+@media (min-width: 1080px) and (max-width: 1380px) {
+	/*#menu-toggle label {
+		display: none;
+	}*/
+}
+
+/*----------------- Large Screen -----------------*/
+
+@media (min-width: 1380px) {
+	/*#menu-toggle label {
+		display: none;
+	}*/
 }
