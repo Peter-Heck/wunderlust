@@ -523,10 +523,350 @@ main article {
 
 /*----------------- Medium Screen -----------------*/
 
-@media (min-width: 1080px) and (max-width: 1380px) {
-	/*#menu-toggle label {
+@media (min-width: 1080px) {
+	body {
+		width: 1080px;
+		margin: auto;
+	}
+
+	/*----------------- Header -----------------*/
+
+	header {
+		display: grid;
+		grid-template-areas:
+			"logo heading heading heading"
+			"logo descrip descrip descrip"
+			"nav nav nav nav";
+		padding-top: 20px;
+		padding-bottom: 60px;
+	}
+
+	header #logo {
+		grid-area: logo;
+		margin-top: 40px;
+	}
+
+	#logo img {
+		width: 300px;
+	}
+
+	header h1 {
+		grid-area: heading;
+		position: relative;
+		left: -750px;
+		margin-top: 50px;
+		padding-bottom: 20px;
+	}
+
+	header p {
+		grid-area: descrip;
+		position: relative;
+		left: -750px;
+		width: 700px;
+	}
+
+	#menu-toggle label {
 		display: none;
-	}*/
+	}
+
+	#menu-toggle ul {
+		grid-area: nav;
+		visibility: visible;
+		position: relative;
+		top: auto;
+		left: auto;
+		width: 1080px;
+		z-index: 99;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: auto;
+		justify-content: center;
+		padding-top: 50px;
+	}
+
+	#menu-toggle ul li {
+		border-bottom: none;
+		width: 200px;
+		padding-top: 25px;
+		padding-bottom: 25px;
+		text-align: center;
+		color: var(--black);
+		background-color: var(--white);
+		text-transform: uppercase;
+		font-weight: bold;
+		position: relative;
+		justify-self: center;
+	}
+
+	#menu-toggle ul .active {
+		background-color: var(--yellow);
+	}
+
+	/*----------------- Intro -----------------*/
+
+	article {
+		width: 1080px;
+	}
+
+	#intro {
+		width: 900px;
+		justify-self: center;
+	}
+
+	#img-grid {
+		width: 900px;
+		display: grid;
+		grid-template-areas:
+			"img1 img2"
+			"picture picture";
+	}
+
+	#img-grid > img {
+		width: 435px;
+		justify-self: center;
+		padding-left: 30px;
+	}
+
+	#img-grid img:first-child {
+		grid-area: img2;
+	}
+
+	#img-grid img::nth-child(2) {
+		grid-area: img1;
+	}
+
+	#img-grid picture {
+		grid-area: picture;
+	}
+
+	#img-grid picture img {
+		width: 900px;
+		justify-self: center;
+		padding-left: 30px;
+	}
+
+	/*----------------- Plan -----------------*/
+
+	#plan {
+		width: 1080px;
+		height: auto;
+		padding-bottom: 40px;
+	}
+
+	#plan div {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto;
+		position: relative;
+		
+	}
+
+	#plan div section {
+		background-color: var(--teal);
+		border: 5px solid var(--white);
+		border-radius: 25px;
+		padding: 20px 0px 0px;
+		margin-top: 20px;
+		height: 400px;
+		width: 450px;
+		text-align: center;
+		position: relative;
+		left: 220px;
+	}
+
+	#plan div section:nth-child(even) {
+		margin-left: 20px;
+	}
+
+	/*----------------- Testimonials -----------------*/
+
+	#testimonials {
+		width: 1080px;
+		height: auto;
+		padding-bottom: 40px;
+	}
+
+	#testimonials div {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto;
+		position: relative;
+		
+	}
+
+	#testimonials div section {
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+
+	#testimonials div section:nth-child(odd) {
+		margin-right: 80px;
+	}
+
+	#testimonials div section:nth-child(even) {
+		margin-left: 20px;
+	}
+
+	/*----------------- About -----------------*/
+
+	#about {
+		width: 1080px;
+	}
+
+	#about h3 {
+		padding-left: 50px;
+	}
+
+	#about div {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
+
+	/*----------------- Contact -----------------*/
+
+	#contact {
+		padding-top: 40px;
+		padding-bottom: 20px;
+		width: 1080px;
+	}
+
+	#contact h3 span {
+		font-family: "Montserrat";
+		font-weight: normal;
+		font-size: 0.5em;
+		font-style: italic;
+	}
+
+	#contact h3 {
+		text-align: center;
+		padding-bottom: 30px;
+	}
+
+	#contact form {
+		display: grid;
+		grid-template-rows: repeat(3, auto);
+	}
+
+	#names {
+		display: flex;
+		flex-direction: column;
+		width: 950px;
+		padding-left: 70px;
+	}
+
+	#names label {
+		font-size: 1.5em;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	#names input {
+		height: 75px;
+		font-size: 1.5em;
+		margin-bottom: 40px;
+	}
+
+	#nums {
+		display: flex;
+		flex-direction: column;
+		width: 950px;
+		padding-left: 70px;
+	}
+
+	#nums fieldset {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	#nums > input {
+		height: 75px;
+		font-size: 1.5em;
+		margin-bottom: 40px;
+	}
+
+	#nums label {
+		font-size: 1.5em;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	#nums fieldset label {
+		padding-bottom: 20px;
+		text-transform: capitalize;
+		font-weight: normal;
+		position: relative;
+		top: -10px;
+	}
+
+	#nums fieldset label input {
+		height: 100px;
+		width: 100px;
+		position: relative;
+		top: 40px;
+		accent-color: var(--purple);
+	}
+
+	#nums fieldset {
+		padding-bottom: 40px;
+	}
+
+	#nums legend {
+		font-size: 1.5em;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	#selects {
+		width: 950px;
+		padding-left: 70px;
+	}
+
+	#selects > label {
+		font-size: 1.5em;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	#selects div select {
+		height: 75px;
+		font-size: 1.5em;
+		margin-bottom: 40px;
+		width: 950px;
+	}
+
+	#selects #mySubmit {
+		background-color: var(--purple);
+		color: var(--white);
+		font-size: 1.5em;
+		text-transform: uppercase;
+		font-weight: bold;
+		letter-spacing: 0.1em;
+		width: 480px;
+		height: 100px;
+		position: relative;
+		left: 470px;
+	}
+
+	/*----------------- Footer -----------------*/
+
+	footer {
+		background-color: var(--lightGray);
+		padding-top: 30px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		text-align: center;
+	}
+
+	footer p {
+		font-size: 1em;
+		padding-bottom: 20px;
+	}
+
+	footer a {
+		font-family: "Montserrat";
+		padding-bottom: 20px;
+	}
 }
 
 /*----------------- Large Screen -----------------*/
