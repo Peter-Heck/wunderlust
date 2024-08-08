@@ -871,8 +871,303 @@ main article {
 
 /*----------------- Large Screen -----------------*/
 
-@media (min-width: 1380px) {
-	/*#menu-toggle label {
+@media (min-width: 1920px) {
+	#menu-toggle label {
 		display: none;
-	}*/
+	}
+
+	body {
+		width: 1920px;
+	}
+
+	/*----------------- Header -----------------*/
+
+	header {
+		width: 1920px;
+		grid-template-areas:
+			"logo title navig navig"
+			"logo description description description";
+	}
+
+	header #logo img {
+		grid-area: logo;
+		height: 200px;
+		width: auto;
+	}
+
+	header h1 {
+		grid-area: title;
+		position: relative;
+		left: -100px;
+		top: 50px;
+	}
+
+	header p {
+		grid-area: description;
+		position: relative;
+		left: -100px;
+		width: 800px;
+	}
+
+	#menu-toggle ul {
+		grid-area: navig;
+		visibility: visible;
+		position: relative;
+		top: -20px;
+		left: 102px;
+		width: auto;
+		z-index: 99;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: auto;
+		justify-content: center;
+		padding-top: 0px;
+	}
+
+	#menu-toggle ul li {
+		border-bottom: none;
+		width: 200px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		text-align: center;
+		color: var(--black);
+		background-color: var(--white);
+		text-transform: uppercase;
+		font-weight: bold;
+		position: relative;
+		justify-self: center;
+	}
+
+	#menu-toggle ul .active {
+		background-color: var(--yellow);
+	}
+
+	/*----------------- Intro -----------------*/
+	article {
+		width: 1920px;
+	}
+
+	#intro {
+		width: 1860px;
+		padding-top: 30px;
+		display: grid;
+		grid-template-areas: 
+			"title images"
+			"para images";
+	}
+
+	#intro h2 {
+		grid-area: title;
+	}
+
+	#intro p {
+		grid-area: para;
+		position: relative;
+		top: -225px;
+		margin-right: 70px;
+	}
+
+	#intro div {
+		grid-area: images;
+		padding-right: 50px;
+	}
+
+	/*----------------- Plan -----------------*/
+
+	#plan {
+		width: 1720px;
+		padding: 100px;
+	}
+
+	#plan h3 {
+		text-align: left;
+		position: relative;
+		left: 10px;
+	}
+
+	#plan div {
+		width: 1720px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	#plan div section {
+		background-color: var(--teal);
+		border: 5px solid var(--white);
+		border-radius: 25px;
+		padding: 20px 0px 0px;
+		margin-top: 20px;
+		height: 350px;
+		width: 400px;
+		text-align: center;
+		position: relative;
+		left: 0px;
+	}
+
+	#plan div section:nth-child(even) {
+		margin-left: 0px;
+	}
+
+	/*----------------- Testimonials -----------------*/
+
+	#testimonials {
+		width: 1720px;
+		padding-top: 150px;
+		padding-bottom: 150px;
+	}
+
+	#testimonials h3 {
+		text-align: left;
+		margin-left: 150px;
+	}
+
+	#testimonials div {
+		width: 1720px;
+		margin-left: 150px;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		justify-content: center;
+	}
+
+	/*----------------- About -----------------*/
+
+	#about {
+		width: 1720px;
+		padding: 100px;
+	}
+
+	#about h3 {
+		text-align: left;
+		padding-bottom: 50px;
+	}
+
+	/*----------------- Contact -----------------*/
+
+	#contact {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		width: 1920px;
+	}
+
+	#contact h3 span {
+		font-family: "Montserrat";
+		font-weight: normal;
+		font-size: 0.5em;
+		font-style: italic;
+	}
+
+	#contact h3 {
+		text-align: center;
+		padding-bottom: 30px;
+	}
+
+	#contact form {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		justify-content: left;
+		position: relative;
+		left: -50px;
+	}
+
+	#names {
+		display: flex;
+		flex-direction: column;
+		width: 580px;
+		padding-left: 70px;
+	}
+
+	#names label {
+		font-size: 1.5em;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	#names input {
+		height: 75px;
+		font-size: 1.5em;
+	}
+
+	#nums {
+		display: flex;
+		flex-direction: column;
+		width: 580px;
+		padding-left: 70px;
+	}
+
+	#nums fieldset {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	#nums > input {
+		height: 75px;
+		font-size: 1.5em;
+		margin-bottom: 40px;
+	}
+
+	#nums label {
+		font-size: 1.5em;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	#nums fieldset label {
+		padding-bottom: 20px;
+		text-transform: capitalize;
+		font-weight: normal;
+		position: relative;
+		top: -10px;
+	}
+
+	#nums fieldset label input {
+		height: 70px;
+		width: 70px;
+		position: relative;
+		top: 20px;
+		accent-color: var(--purple);
+	}
+
+	#nums fieldset {
+		padding-bottom: 20px;
+	}
+
+	#nums legend {
+		font-size: 1.5em;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	#selects {
+		width: 580px;
+		padding-left: 70px;
+	}
+
+	#selects > label {
+		font-size: 1.5em;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	#selects div select {
+		height: 75px;
+		font-size: 1.5em;
+		margin-bottom: 40px;
+		width: 580px;
+	}
+
+	#selects #mySubmit {
+		background-color: var(--purple);
+		color: var(--white);
+		font-size: 1.5em;
+		text-transform: uppercase;
+		font-weight: bold;
+		letter-spacing: 0.1em;
+		width: 400px;
+		height: 75px;
+		position: relative;
+		left: 180px;
+		top: 40px;
+	}
 }
