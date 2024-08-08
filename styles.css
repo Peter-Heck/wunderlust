@@ -86,7 +86,7 @@ h2 {
 }
 
 h3 {
-	font-size: 3em;
+	font-size: 2.5em;
 	font-weight: bold;
 }
 
@@ -149,7 +149,7 @@ main article {
 }
 
 #contact input, #contact select {
-	border: 2px solid var(--purple);
+	border: 4px solid var(--purple);
 }
 
 .required {
@@ -378,6 +378,146 @@ main article {
 	#about div section {
 		padding-top: 20px;
 		text-align: center;
+	}
+
+	/*----------------- Contact -----------------*/
+
+	#contact {
+		padding-top: 40px;
+		padding-bottom: 20px;
+	}
+
+	#contact h3 span {
+		font-family: "Montserrat";
+		font-weight: normal;
+		font-size: 0.5em;
+		font-style: italic;
+	}
+
+	#contact h3 {
+		text-align: center;
+		padding-bottom: 30px;
+	}
+
+	#contact form {
+		display: grid;
+		grid-template-rows: repeat(3, auto);
+	}
+
+	#names {
+		display: flex;
+		flex-direction: column;
+		width: 480px;
+		padding-left: 70px;
+	}
+
+	#names label {
+		font-size: 1.5em;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	#names input {
+		height: 75px;
+		font-size: 1.5em;
+		margin-bottom: 40px;
+	}
+
+	#nums {
+		display: flex;
+		flex-direction: column;
+		width: 480px;
+		padding-left: 70px;
+	}
+
+	#nums fieldset {
+		display: flex;
+		flex-direction: column;
+	}
+
+	#nums > input {
+		height: 75px;
+		font-size: 1.5em;
+		margin-bottom: 40px;
+	}
+
+	#nums label {
+		font-size: 1.5em;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	#nums fieldset label {
+		padding-bottom: 20px;
+		text-transform: capitalize;
+		font-weight: normal;
+	}
+
+	#nums fieldset label input {
+		height: 60px;
+		width: 60px;
+		position: relative;
+		top: 20px;
+		accent-color: var(--purple);
+	}
+
+	#nums fieldset {
+		padding-bottom: 15px;
+	}
+
+	#nums legend {
+		font-size: 1.5em;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	#selects {
+		width: 480px;
+		padding-left: 70px;
+	}
+
+	#selects > label {
+		font-size: 1.5em;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	#selects div select {
+		height: 75px;
+		font-size: 1.5em;
+		margin-bottom: 40px;
+		width: 480px;
+	}
+
+	#selects #mySubmit {
+		background-color: var(--purple);
+		color: var(--white);
+		font-size: 1.5em;
+		text-transform: uppercase;
+		font-weight: bold;
+		letter-spacing: 0.1em;
+		width: 480px;
+		height: 100px;
+	}
+
+	/*----------------- Footer -----------------*/
+
+	footer {
+		background-color: var(--lightGray);
+		padding-top: 30px;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	footer p {
+		font-size: 1em;
+		padding-bottom: 20px;
+	}
+
+	footer a {
+		font-family: "Montserrat";
+		padding-bottom: 20px;
 	}
 }
 
